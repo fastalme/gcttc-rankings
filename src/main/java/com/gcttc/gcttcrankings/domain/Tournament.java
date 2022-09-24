@@ -1,41 +1,30 @@
 package com.gcttc.gcttcrankings.domain;
 
-import java.time.LocalDate;
+import java.util.List;
 
 public class Tournament {
 
-    private LocalDate date;
-    private String organizer;
-    private String responsible;
+    private TournamentInformation information;
+    private List<MatchEntry> matches;
 
-    public Tournament (LocalDate date, String organizer, String responsible) {
-        this.date = date;
-        this.organizer = organizer;
-        this.responsible = responsible;
+    public Tournament (TournamentInformation information, List<MatchEntry> matches) {
+        this.information = information;
+        this.matches = matches;
     }
 
-    public LocalDate getDate () {
-        return date;
+    public TournamentInformation getInformation () {
+        return information;
     }
 
-    public void setDate (LocalDate date) {
-        this.date = date;
+    public void setInformation (TournamentInformation information) {
+        this.information = information;
     }
 
-    public String getOrganizer () {
-        return organizer;
+    public List<MatchEntry> getMatches () {
+        return matches;
     }
 
-    public void setOrganizer (String organizer) {
-        this.organizer = organizer;
+    public void setMatches (List<MatchEntry> matches) {
+        this.matches = matches;
     }
-
-    public String getResponsible () {
-        return responsible;
-    }
-
-    public void setResponsible (String responsible) {
-        this.responsible = responsible;
-    }
-
 }
